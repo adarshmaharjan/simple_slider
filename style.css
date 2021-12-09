@@ -8,9 +8,12 @@
   display: inline-block;
   max-width: 100%;
 }
-.hidden-img {
-  opacity: 0;
+/* .translucent-img {
+  opacity: 0.2;
 }
+.visible-image {
+  opacity: 1;
+} */
 .slider-container {
   position: relative;
   width: 100%;
