@@ -46,7 +46,7 @@ function increment() {
 function changeImage(src, alt, dataId) {
   const imgElement = document.querySelector('.responsive-img')
   // imgElement.classList.add('fade')
-  imgElement.style.opacity = 0.5
+  imgElement.style.opacity = 0.4
   const fadeInterval = setInterval(() => {
     // console.log('on interval')
     opacity += 0.2
