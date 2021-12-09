@@ -25,6 +25,8 @@ const nextBtn = document.querySelector('.next-btn')
 
 // global variables
 let count = 0
+let opacity = 0
+
 // let imgElement = ni
 
 // functions
@@ -43,6 +45,17 @@ function increment() {
 }
 function changeImage(src, alt, dataId) {
   const imgElement = document.querySelector('.responsive-img')
+  // imgElement.classList.add('fade')
+  imgElement.style.opacity = 0.5
+  const fadeInterval = setInterval(() => {
+    // console.log('on interval')
+    opacity += 0.2
+    imgElement.style.opacity = opacity
+    if (opacity === 1) {
+      opacity = 0
+      clearInterval(fadeInterval)
+    }
+  }, 200)
   imgElement.setAttribute('src', src)
   imgElement.setAttribute('alt', alt)
   imgElement.setAttribute('dataId', dataId)
