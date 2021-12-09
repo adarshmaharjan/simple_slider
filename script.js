@@ -46,7 +46,11 @@ function createImage(src, alt, dataId) {
   imgContainer.innerHTML = ''
   // creation of image
   const image = document.createElement('img')
+  // added class that makes image responsive
   image.classList.add('responsive-img')
+  // added class that helps in animation
+  image.classList.add('fade')
+
   image.setAttribute('src', src)
   image.setAttribute('alt', alt)
   image.setAttribute('data-id', dataId)
