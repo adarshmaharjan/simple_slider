@@ -25,25 +25,30 @@ const nextBtn = document.querySelector('.next-btn')
 
 // global variables
 let count = 0
+// let imgElement = ni
 
 // functions
 
 // decrement function
 function decrement() {
   count -= 1
-  if (count < 0) count = images.length
+  if (count < 0) count = images.length - 1
   //   console.log(count)
 }
 // increment
 function increment() {
   count += 1
-  if (count >= images.length) count = 0
+  if (count === images.length) count = 0
   //   console.log(count)
+}
+function changeImage(src, alt, dataId) {
+  const imgElement = document.querySelector('.responsive-img')
+  imgElement.setAttribute('src', src)
+  imgElement.setAttribute('alt', alt)
+  imgElement.setAttribute('dataId', dataId)
 }
 // create image
 function createImage(src, alt, dataId) {
-  // remove image
-  imgContainer.innerHTML = ''
   // creation of image
   const image = document.createElement('img')
   // added class that makes image responsive
@@ -60,14 +65,14 @@ function createImage(src, alt, dataId) {
 prevBtn.addEventListener('click', () => {
   decrement()
   const { name, src } = images[count]
-  createImage(src, name, count)
+  changeImage(src, name, count)
   //   console.log(count)
 })
 // next button
 nextBtn.addEventListener('click', () => {
   increment()
   const { name, src } = images[count]
-  createImage(src, name, count)
+  changeImage(src, name, count)
 })
 
 // Execution
