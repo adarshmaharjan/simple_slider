@@ -23,7 +23,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* this might eat the part of image if the images dont respect the aspect ratio of 1:1*/
+  /* this might eat the part of image 
+  if the images don't respect the aspect ratio */
   height: 50%;
   width: 50%;
   /* background-color: red; */
@@ -51,4 +52,22 @@
   background-color: blue;
   cursor: pointer;
   color: #fff;
+}
+/* animation */
+/* inspired from w3school*/
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
